@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Client1 from "./pages/client1";
+import Client1 from "./pages/Client1";
 import Client2 from "./pages/client2";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
