@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Client1 from "./pages/Client1";
-import Client2 from "./pages/client2";
+import Client2 from "./pages/Client2";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
