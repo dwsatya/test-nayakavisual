@@ -15,7 +15,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/auth/register", {
+      const response = await fetch("https://famous-michaelina-nayakavisual-62f8d376.koyeb.app/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

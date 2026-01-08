@@ -17,7 +17,7 @@ export default function AdminDashboard() {
 
   const fetchData = async () => {
     setLoading(true);
-    const endpoint = activeTab === "users" ? "http://127.0.0.1:5000/auth/users" : "http://127.0.0.1:5000/events/";
+    const endpoint = activeTab === "users" ? "https://famous-michaelina-nayakavisual-62f8d376.koyeb.app/auth/users" : "https://famous-michaelina-nayakavisual-62f8d376.koyeb.app/events/";
     try {
       const response = await fetch(endpoint, {
         headers: { "Authorization": `Bearer ${token}` }
@@ -36,7 +36,7 @@ export default function AdminDashboard() {
   const handleUserSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://127.0.0.1:5000/auth/register", {
+      const response = await fetch("https://famous-michaelina-nayakavisual-62f8d376.koyeb.app/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userForm)
@@ -56,7 +56,7 @@ export default function AdminDashboard() {
 
   const deleteUser = async (id) => {
     if (!window.confirm("Hapus user ini? Akun tidak dapat dikembalikan.")) return;
-    await fetch(`http://127.0.0.1:5000/auth/delete/${id}`, {
+    await fetch(`https://famous-michaelina-nayakavisual-62f8d376.koyeb.app/auth/delete/${id}`, {
       method: "DELETE",
       headers: { "Authorization": `Bearer ${token}` }
     });
@@ -67,7 +67,7 @@ export default function AdminDashboard() {
   const handleEventSubmit = async (e) => {
     e.preventDefault();
     const isEdit = eventForm.id !== null;
-    const url = isEdit ? `http://127.0.0.1:5000/events/update/${eventForm.id}` : "http://127.0.0.1:5000/events/add";
+    const url = isEdit ? `https://famous-michaelina-nayakavisual-62f8d376.koyeb.app/events/update/${eventForm.id}` : "https://famous-michaelina-nayakavisual-62f8d376.koyeb.app/events/add";
     
     try {
       const response = await fetch(url, {
@@ -95,7 +95,7 @@ export default function AdminDashboard() {
 
   const deleteEvent = async (id) => {
     if (!window.confirm("Hapus event ini?")) return;
-    await fetch(`http://127.0.0.1:5000/events/delete/${id}`, {
+    await fetch(`https://famous-michaelina-nayakavisual-62f8d376.koyeb.app/events/delete/${id}`, {
       method: "DELETE",
       headers: { "Authorization": `Bearer ${token}` }
     });
