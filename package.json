@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
     "deploy": "npm run build && gh-pages -d dist"
   },
@@ -28,10 +29,5 @@
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.2.5"
-  },
-  "homepage": "https://dwsatya.github.io/test-nayakavisual",
-  "scripts": {
-    "build": "vite build",
-    "deploy": "gh-pages -d dist"
   }
 }
